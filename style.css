@@ -6,6 +6,7 @@
 html {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 header {
@@ -58,6 +59,9 @@ header hr {
   font-size: 16px;
   font-weight: 400;
 }
+.navbar__mobile {
+  display: none;
+}
 
 .top {
   position: absolute;
@@ -109,6 +113,7 @@ main {
 .categories__title {
   font-size: 48px;
   font-weight: 600;
+  margin-bottom: 32px;
 }
 .categories__rest, .categories__work {
   flex: auto;
@@ -137,4 +142,105 @@ main {
   font-size: 34px;
   font-weight: 600;
   color: white;
+}
+.categories__rest {
+  background: url("images/rest.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.categories__work {
+  background: url("images/work.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.categories__kitchen {
+  background: url("images/kitchen.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.categories__kids {
+  background: url("images/kids.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.categories__bath {
+  background: url("images/bath.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.offers {
+  display: flex;
+  gap: 32px;
+}
+.offers__title {
+  font-size: 48px;
+  font-weight: 600;
+  margin: 32px 0;
+}
+.offers__card {
+  position: relative;
+  display: flex;
+  flex: auto;
+  gap: 32px;
+  flex-direction: column;
+}
+.offers__card:hover ::before {
+  display: block;
+  position: absolute;
+}
+.offers__card-title {
+  font-size: 24px;
+}
+.offers__desc {
+  font-size: 14px;
+  font-weight: 400;
+}
+.offers__price {
+  font-size: 24px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.offers__stroke {
+  text-decoration: line-through;
+  float: right;
+  color: grey;
+}
+
+@media screen and (max-width: 786px) {
+  main,
+.navbar,
+hr {
+    width: 95vw !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .categories {
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 576px) {
+  hr {
+    display: none;
+  }
+  .categories,
+.offers {
+    flex-direction: column;
+  }
+  .categories > *,
+.offers > * {
+    width: 100%;
+  }
+  .navbar__search, .navbar__shop {
+    display: none;
+  }
+  .navbar__mobile {
+    display: flex;
+    gap: 32px;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  .navbar__mobile > img:hover {
+    transform: scale(1.1);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@
 html {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
 }
 header {
   width: 100vw;
@@ -49,6 +50,9 @@ header {
       font-size: 16px;
       font-weight: 400;
     }
+  }
+  &__mobile {
+    display: none;
   }
 }
 .top {
@@ -101,6 +105,7 @@ main {
   &__title {
     font-size: 48px;
     font-weight: 600;
+    margin-bottom: 32px;
   }
   &__rest,
   &__work {
@@ -134,6 +139,114 @@ main {
       font-size: 34px;
       font-weight: 600;
       color: white;
+    }
+  }
+
+  &__rest {
+    background: url("images/rest.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__work {
+    background: url("images/work.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__kitchen {
+    background: url("images/kitchen.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__kids {
+    background: url("images/kids.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__bath {
+    background: url("images/bath.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.offers {
+  display: flex;
+  gap: 32px;
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+    margin: 32px 0;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex: auto;
+    gap: 32px;
+    flex-direction: column;
+
+    &:hover ::before {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  &__card-title {
+    font-size: 24px;
+  }
+  &__desc {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__price {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__stroke {
+    text-decoration: line-through;
+    float: right;
+    color: grey;
+  }
+}
+
+@media screen and (max-width: 786px) {
+  main,
+  .navbar,
+  hr {
+    width: 95vw !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .categories {
+    gap: 5px;
+  }
+}
+@media screen and (max-width: 576px) {
+  hr {
+    display: none;
+  }
+  .categories,
+  .offers {
+    flex-direction: column;
+    & > * {
+      width: 100%;
+    }
+  }
+  .navbar {
+    &__search,
+    &__shop {
+      display: none;
+    }
+    &__mobile {
+      display: flex;
+      gap: 32px;
+      cursor: pointer;
+      margin-right: 1rem;
+
+      & > img:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }

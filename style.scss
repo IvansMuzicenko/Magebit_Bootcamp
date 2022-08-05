@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+header {
+  width: 100vw;
+  hr {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.navbar {
+  display: flex;
+  height: 76px;
+  width: 80vw;
+  color: white;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    font-size: 36px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  &__search {
+    height: 41px;
+    width: 288px;
+    background: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 0 32px;
+    &::placeholder {
+      color: white;
+    }
+  }
+  &__shop {
+    display: flex;
+    gap: 32px;
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+}
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 80vh;
+  background: url("images/bg.svg");
+  background-size: cover;
+
+  &__text {
+    display: column;
+    justify-content: flex-start;
+    width: 80vw;
+    height: 100%;
+    margin: auto;
+    margin-top: 140px;
+    color: white;
+  }
+  &__h2 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70px;
+  }
+  &__h3 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+  &__a {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+main {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 80vh;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+
+  &__title {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  &__rest,
+  &__work {
+    flex: auto;
+    width: 45%;
+    height: 500px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > p {
+      font-size: 34px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  &__kitchen,
+  &__kids,
+  &__bath {
+    flex: auto;
+    width: 30%;
+    height: 400px;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > p {
+      font-size: 34px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+}
